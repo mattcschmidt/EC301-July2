@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Model_Validation
+namespace Model_Validation.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for PatientView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PatientView : UserControl
     {
-        public MainWindow()
+        public PatientView()
         {
             InitializeComponent();
         }
