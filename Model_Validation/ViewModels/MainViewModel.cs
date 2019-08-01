@@ -19,13 +19,16 @@ namespace Model_Validation.ViewModels
         }
 
         public PatientViewModel PatientViewModel { get; }
+        public ProfileViewModel ProfileViewModel { get; }
 
         public MainViewModel(Application app,
-            PatientViewModel patientViewModel)
+            PatientViewModel patientViewModel,
+            ProfileViewModel profileViewModel)
         {
             _app = app;
             Title = $"Model Validation; {_app.CurrentUser}";
             PatientViewModel = patientViewModel;
+            ProfileViewModel = profileViewModel;
         }
 
         internal void OnCloseApplication()

@@ -18,6 +18,7 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <TextBlock FontSize="24" FontWeight="Bold" Text="Verification Data"
                    Grid.ColumnSpan="4" HorizontalAlignment="Center"/>
@@ -33,5 +34,12 @@
         <ComboBox Grid.Row="2" Grid.Column="3" Width="150"
                   ItemsSource="{Binding PlanSetups}" 
                   SelectedItem="{Binding SelectedPlan, Mode=TwoWay}"/>
+        <!--Auto Plan Stuff-->
+        <TextBlock Grid.Row="3" Text="Field Sizes [cm]:"/>
+        <TextBox Text="{Binding FieldSizes}" Grid.Row="3" Grid.Column="1"/>
+        <Button Grid.Row="3" Grid.Column="3" Content="Generate Plan"
+                Width="120" Command="{Binding CalculatePlanCommand}"/>
+        <TextBox Text="{Binding DoseProfileData}" Grid.Column="4" Grid.Row="1"
+                 Grid.RowSpan="3" Height="100"/>
     </Grid>
 </UserControl>
